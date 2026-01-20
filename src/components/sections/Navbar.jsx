@@ -22,12 +22,6 @@ export function Navbar() {
         </a>
 
         <div className="flex items-center gap-4">
-          {/* Badge */}
-          <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-black/5 text-[13px] font-medium shadow-sm">
-             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-             Booking Open — 2 Spots Left
-          </div>
-
           {/* Menu Button */}
           <button className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-black/5 shadow-sm hover:scale-105 transition-transform">
             <Menu size={20} />
