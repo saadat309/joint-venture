@@ -1,0 +1,146 @@
+import { motion } from "framer-motion";
+
+const reviews = [
+  {
+    text: "Working with Joris was a game-changer. He instantly understood our vision and translated it into a sleek, intuitive product. The process felt effortless, and the results exceeded our expectations.",
+    author: "Sophie Lemaire",
+    role: "Product Lead at Loomi",
+    avatar: "https://i.pravatar.cc/150?u=sophie",
+  },
+  {
+    text: "Joris brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been incredible.",
+    author: "Milan Bakker",
+    role: "Founder of Drifted Studio",
+    avatar: "https://i.pravatar.cc/150?u=milan",
+  },
+];
+
+const BlurText = ({ text, delay = 0 }) => {
+  const words = text.split(" ");
+  return (
+    <span className="inline-block">
+      {words.map((word, wordIndex) => (
+        <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em]">
+          {word.split("").map((char, charIndex) => (
+            <motion.span
+              key={charIndex}
+              initial={{ filter: "blur(8px)", opacity: 0, y: 5 }}
+              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: delay + (wordIndex * 0.05) + (charIndex * 0.01),
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </span>
+      ))}
+    </span>
+  );
+};
+
+export function Reviews() {
+  return (
+    <section className="relative overflow-hidden py-32 md:py-48 bg-background">
+      <div className="container-width relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-0 relative">
+          
+          {/* Central Vertical Divider - Height synced to content */}
+          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-black/10 hidden lg:block" />
+
+          {/* Left Review - Pushed down from top */}
+          <div className="relative flex flex-col items-start lg:pr-24 lg:pt-12 lg:pb-32">
+            <div className="relative max-w-[420px]">
+              {/* Quote Mark */}
+              <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="absolute -right-12 top-0 text-5xl font-serif font-bold text-black pointer-events-none"
+              >
+                "
+              </motion.div>
+              
+              <blockquote className="text-xl md:text-[22px] leading-[1.6] text-black font-medium mb-10">
+                <BlurText text={reviews[0].text} delay={0.2} />
+              </blockquote>
+
+              <motion.div 
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+                className="flex items-center gap-4"
+              >
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-sm">
+                  <img
+                    src={reviews[0].avatar}
+                    alt={reviews[0].author}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold text-black text-base leading-tight">
+                    {reviews[0].author}
+                  </span>
+                  <span className="text-[#888] text-sm font-medium">
+                    {reviews[0].role}
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Right Review - Pushed up from bottom */}
+          <div className="relative flex flex-col items-start lg:items-end justify-end lg:pl-24 lg:pt-32 lg:pb-12">
+            <div className="relative max-w-[420px]">
+               {/* Quote Mark */}
+               <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+                className="absolute -right-12 top-0 text-5xl font-serif font-bold text-black pointer-events-none"
+              >
+                "
+              </motion.div>
+
+              <blockquote className="text-xl md:text-[22px] leading-[1.6] text-black font-medium mb-10">
+                <BlurText text={reviews[1].text} delay={0.4} />
+              </blockquote>
+
+              <motion.div 
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="flex items-center gap-4"
+              >
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-sm">
+                  <img
+                    src={reviews[1].avatar}
+                    alt={reviews[1].author}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold text-black text-base leading-tight">
+                    {reviews[1].author}
+                  </span>
+                  <span className="text-[#888] text-sm font-medium">
+                    {reviews[1].role}
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
