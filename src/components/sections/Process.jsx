@@ -30,7 +30,7 @@ export function Process() {
   }, []);
 
   return (
-    <section className="relative section-padding bg-background overflow-x-clip flex flex-col justify-center py-20 lg:py-32">
+    <section className="relative section-padding bg-transparent overflow-x-clip flex flex-col justify-center py-20 lg:py-32">
       <div className="mb-16 lg:mb-24 text-center container-width relative z-20">
         <div className="flex items-center justify-center gap-6 mb-6 lg:mb-8">
           <div className="w-12 lg:w-16 h-px bg-linear-to-l from-black/30 to-transparent" />
@@ -67,6 +67,26 @@ export function Process() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
             />
+            <motion.circle
+              cx="220"
+              cy="40"
+              r="4"
+              fill="#FF5500"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.3 }}
+            />
+            <motion.circle
+              cx="440"
+              cy="-30"
+              r="4"
+              fill="#FF5500"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.5, duration: 0.3 }}
+            />
             <g transform="translate(650 50)">
               <motion.path
                 d="M85 10 C14 160 242 83 144 68 C39 65 10 227 172 181 Q242 161 344 78"
@@ -80,20 +100,41 @@ export function Process() {
                 viewport={{ once: true }}
                 transition={{ delay: 1, duration: 1.2, ease: "easeInOut" }}
               />
+              <motion.circle
+                cx="85"
+                cy="10"
+                r="4"
+                fill="#FF5500"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1, duration: 0.3 }}
+              />
+              <motion.circle
+                cx="344"
+                cy="78"
+                r="4"
+                fill="#FF5500"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 2.2, duration: 0.3 }}
+              />
             </g>
           </svg>
         </div>
 
         {/* MOBILE CONNECTING LINES (hidden on lg) */}
-        <div className="absolute inset-0 pointer-events-none z-30 lg:hidden overflow-visible left-1/2 -translate-x-1/2 w-full max-w-[400px]">
+        <div className="absolute inset-0 pointer-events-none z-30 lg:hidden overflow-visible left-1/2 -translate-x-1/2 w-full ">
           <svg
             className="w-full h-full overflow-visible"
             viewBox="0 0 400 1200"
             fill="none"
           >
             {/* Path 1: Arch (Vertical) */}
+            <g transform="translate(150 200) scale(0.6 )">
             <motion.path
-              d="M330,280 C400,320 400,420 340,460"
+              d="M330,160 C460,280 420,420 340,460"
               stroke="#FF5500"
               strokeWidth="3"
               fill="none"
@@ -102,8 +143,30 @@ export function Process() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1, ease: "easeInOut" }}
             />
+            <motion.circle
+              cx="330"
+              cy="160"
+              r="5"
+              fill="#FF5500"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.3 }}
+            />
+            <motion.circle
+              cx="340"
+              cy="460"
+              r="5"
+              fill="#FF5500"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.3, duration: 0.3 }}
+            />
+            </g>
+
             {/* Path 2: Complex Twist (Vertical adaptation of the desktop path) */}
-            <g transform="translate(260 680) rotate(90) scale(0.8 -0.8)">
+            <g transform="translate(290 680) rotate(90) scale(0.6 -0.6)">
               <motion.path
                 d="M85 10 C14 160 242 83 144 68 C39 65 10 227 172 181 Q242 161 344 78"
                 stroke="#FF5500"
@@ -116,11 +179,31 @@ export function Process() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, duration: 1.5, ease: "easeInOut" }}
               />
+              <motion.circle
+                cx="85"
+                cy="10"
+                r="5"
+                fill="#FF5500"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.3 }}
+              />
+              <motion.circle
+                cx="344"
+                cy="78"
+                r="5"
+                fill="#FF5500"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 2.3, duration: 0.3 }}
+              />
             </g>
           </svg>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-24 md:gap-32 lg:gap-0 relative z-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-0 relative z-10 w-full">
           {steps.map((step, i) => (
             <div key={step.number} className="relative w-full flex justify-center lg:w-1/3">
               <motion.div
@@ -141,29 +224,32 @@ export function Process() {
                   delay: i * 0.1,
                 }}
                 className={`
-                  relative w-full max-w-[320px] md:max-w-[380px] lg:max-w-none
+                  relative w-full lg:max-w-none
                   ${i === 1 ? "lg:-mt-24 z-20" : "z-10"}
                 `}
               >
                 <div
                   className={`
-                    relative p-8 md:p-10 aspect-square
+                    relative p-8 md:p-10 
+                    w-full max-w-2xl lg:max-w-none
+                    aspect-auto md:aspect-[2.5/1] lg:aspect-square
                     bg-white 
                     rounded-[2rem] md:rounded-[2.5rem] 
-                    border-[4px] md:border-[6px] border-[#f0f0f0] 
-                    shadow-[0_10px_30px_rgba(0,0,0,0.08)]
-                    flex flex-col justify-between
+                    border-[2px] md:border-[4px] lg:border-[6px] border-[#f0f0f0] 
+                    shadow-[0_10px_30px_rgba(0,0,0,0.04)]
+                    flex flex-row items-center gap-6 md:gap-12
+                    lg:flex-col lg:items-start lg:justify-between
                   `}
                 >
-                  <div className="text-5xl md:text-6xl font-bold text-black leading-none mb-8 md:mb-12">
+                  <div className="text-5xl md:text-7xl lg:text-6xl font-bold text-black leading-none lg:mb-12 shrink-0">
                     {step.number}
                   </div>
 
-                  <div>
-                    <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-bold font-sans tracking-tight">
+                  <div className="text-left">
+                    <h3 className="mb-1 md:mb-2 text-xl md:text-3xl lg:text-2xl font-bold font-sans tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="leading-relaxed text-muted-foreground/90 font-medium text-base md:text-lg">
+                    <p className="leading-relaxed text-muted-foreground/90 font-medium text-sm md:text-lg lg:text-lg max-w-md">
                       {step.description}
                     </p>
                   </div>
@@ -174,8 +260,7 @@ export function Process() {
         </div>
       </div>
 
-      {/* Background Gradient Spotlights */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-white/40 blur-3xl rounded-full pointer-events-none -z-10" />
+      
     </section>
   );
 }

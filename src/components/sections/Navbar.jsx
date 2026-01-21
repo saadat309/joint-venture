@@ -98,13 +98,7 @@ export function Navbar() {
                       {link.name}
                     </a>
                   ))}
-                  <a
-                    href="#template"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-bold text-[#FF5500] hover:scale-105 transition-transform origin-left"
-                  >
-                    Get Template
-                  </a>
+                  
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-black/5 w-full">

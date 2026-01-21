@@ -32,8 +32,8 @@ export function Footer() {
   const opacity = useTransform(smoothProgress, [0.4, 0.9], [0, 1]);
 
   return (
-    <footer ref={containerRef} className="pt-24 pb-12 bg-background overflow-hidden">
-      <div className="container-width">
+    <footer ref={containerRef} className="pt-24 pb-12 bg-transparent overflow-hidden">
+      <div className="container mx-auto">
         <div className="relative overflow-hidden text-center bg-[#0a0a0a] rounded-[3rem] md:rounded-[4rem] px-8 md:px-24 h-[700px] md:h-[800px] shadow-[0_50px_100px_rgba(0,0,0,0.3)] flex flex-col justify-between">
           {/* Grain Texture Overlay */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
@@ -71,9 +71,9 @@ export function Footer() {
               </p>
 
               {/* CTA Button */}
-              <div className="flex justify-center">
-                <button className="relative flex items-center p-2 overflow-hidden rounded-full bg-white/10 group transition-all hover:scale-[1.02]">
-                  <span className="relative flex items-center gap-3 px-8 py-4 text-white font-bold bg-black rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/10">
+              <div className="flex justify-center w-full px-4 md:px-0">
+                <button className="relative flex items-center p-1.5 md:p-2 overflow-hidden rounded-full bg-white/10 group transition-all hover:scale-[1.02] w-full md:w-auto">
+                  <span className="relative flex items-center justify-center gap-3 w-full px-6 py-3.5 md:px-8 md:py-4 text-white font-bold bg-black rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/10">
                     <span className="text-sm md:text-base">Book a free intro call</span>
                     <ArrowRight
                       size={18}
@@ -86,7 +86,7 @@ export function Footer() {
           </div>
 
           {/* Bottom Row - Static */}
-          <div className="relative z-10 pt-8 pb-10 border-t border-white/5">
+          <div className="relative z-10 pt-8 pb-10">
             <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
               {/* Copyright Block */}
               <div className="relative py-1.5">

@@ -2,6 +2,22 @@
 
 @import "tailwindcss";
 
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -45,7 +61,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 95%; /* #f2f2f2 */
+    --background: 0 0% 100%; /* Default background as white */
     --foreground: 0 0% 0%;   /* #000000 */
 
     --card: 0 0% 100%;
@@ -82,8 +98,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: #ffffff;
   }
 }
 

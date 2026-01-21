@@ -25,7 +25,7 @@ const projects = [
 
 export function CaseStudies() {
   return (
-    <section id="work" className="section-padding bg-background py-24 lg:py-32">
+    <section id="work" className="section-padding bg-transparent py-16 md:py-24">
       <div className="container-width mb-16 lg:mb-24 text-center">
         <div className="flex items-center justify-center gap-6 mb-6 lg:mb-8">
           <div className="w-12 lg:w-16 h-px bg-linear-to-l from-black/30 to-transparent" />

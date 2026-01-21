@@ -88,11 +88,11 @@ const Word = ({ children, progress, range }) => {
 
 export function Intro() {
   const containerRef = useRef(null)
-  
+  const textRef = useRef(null)
   
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 0.2", "end 0.8"]
+    target: textRef,
+    offset: ["start 0.8", "start 0.25"]
   })
 
   const smoothProgress = useSpring(scrollYProgress, {
@@ -105,7 +105,7 @@ export function Intro() {
   const words = fullText.split(" ")
 
   return (
-    <section ref={containerRef} className="py-24 md:py-48 overflow-hidden bg-background">
+    <section ref={containerRef} className="py-24 md:py-48 overflow-hidden bg-transparent">
       <div className="relative text-center container-width">
         {/* Hello! Header with Lines */}
         <div className="flex items-center justify-center gap-6 mb-16">
@@ -123,7 +123,7 @@ export function Intro() {
 
         <div className="relative w-full max-w-[1400px] mx-auto">
           {/* Main Heading with Unified Color and Scroll Reveal - Smaller Font (32px Desktop) */}
-          <h2 className="max-w-4xl mx-auto text-[24px] md:text-[32px] font-normal leading-[1.4] tracking-tight px-4 text-black">
+          <h2 ref={textRef} className="max-w-4xl mx-auto text-[24px] md:text-[32px] font-normal leading-[1.4] tracking-tight px-4 text-black">
             {words.map((word, i) => {
               const start = i / words.length;
               const end = (i + 1) / words.length;

@@ -68,7 +68,7 @@ export function ProjectCTA() {
   }
 
   return (
-    <section ref={containerRef} className="relative px-4 md:px-12 pb-32 bg-background overflow-hidden">
+    <section ref={containerRef} className="relative px-4 md:px-6 pb-16 bg-transparent overflow-hidden">
       <div 
         className="max-w-7xl mx-auto relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden min-h-[110vh] md:min-h-0 md:aspect-[16/12] shadow-2xl border-[8px] md:border-[12px] border-[#f0f0f0] bg-white"
       >
