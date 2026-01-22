@@ -46,24 +46,24 @@ const slideDown = {
 
 export function Profile() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 lg:py-48 bg-transparent">
+    <section id="about" className="relative overflow-hidden py-24 md:py-32 lg:py-48 bg-transparent">
       <div className="container-width px-4 md:px-8">
         {/* Header */}
         <div className="mb-16 md:mb-24 text-center">
           <div className="flex items-center justify-center gap-4 md:gap-6 mb-6 md:mb-8">
-            <div className="w-12 md:w-16 h-px bg-linear-to-l from-black/30 to-transparent" />
+            <div className="w-12 md:w-16 h-px bg-linear-to-l from-foreground/30 to-transparent" />
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[#777] font-serif italic text-xl md:text-2xl"
+              className="text-muted-foreground font-serif italic text-xl md:text-2xl"
             >
               About
             </motion.p>
-            <div className="w-12 md:w-16 h-px bg-linear-to-r from-black/30 to-transparent" />
+            <div className="w-12 md:w-16 h-px bg-linear-to-r from-foreground/30 to-transparent" />
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight text-balance">
-            Pushing boundaries <span className="text-[#a0a0a0]">since 2011</span>
+            Pushing boundaries <span className="text-muted-foreground">since 2011</span>
           </h2>
         </div>
 
@@ -71,7 +71,7 @@ export function Profile() {
           {/* Left: Image Column (Compact 35% width) */}
           <div className="w-full lg:w-[35%] shrink-0">
             <div
-              className="relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] md:border-[6px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-[#f5f5f5] lg:-rotate-1"
+              className="relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] md:border-[6px] border-background shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-muted lg:-rotate-1"
             >
               <img
                 src="https://framerusercontent.com/images/kE0M3vK0f0S1V0V1V0V1V0V1.png" 
@@ -88,14 +88,14 @@ export function Profile() {
               transition={{ ...slideDown.transition, delay: 0.2 }}
               className="mt-6 md:mt-8 flex justify-between items-end"
             >
-              <div className="flex gap-4 md:gap-5 text-[#888]">
-                <a href="#" className="hover:text-black transition-colors"><Instagram className="w-4 h-4 md:w-4.5 md:h-4.5" /></a>
-                <a href="#" className="hover:text-black transition-colors"><Linkedin className="w-4 h-4 md:w-4.5 md:h-4.5" /></a>
-                <a href="#" className="hover:text-black transition-colors"><XIcon /></a>
+              <div className="flex gap-4 md:gap-5 text-muted-foreground">
+                <a href="#" className="hover:text-foreground transition-colors"><Instagram className="w-4 h-4 md:w-4.5 md:h-4.5" /></a>
+                <a href="#" className="hover:text-foreground transition-colors"><Linkedin className="w-4 h-4 md:w-4.5 md:h-4.5" /></a>
+                <a href="#" className="hover:text-foreground transition-colors"><XIcon /></a>
               </div>
               <div className="text-right">
-                <h3 className="font-bold text-base md:text-lg text-black leading-tight">Joris van Dijk</h3>
-                <p className="text-[#888] text-xs md:text-sm font-medium">Hanzo Studio, Founder</p>
+                <h3 className="font-bold text-base md:text-lg text-foreground leading-tight">Joris van Dijk</h3>
+                <p className="text-muted-foreground text-xs md:text-sm font-medium">Hanzo Studio, Founder</p>
               </div>
             </motion.div>
           </div>
@@ -104,28 +104,28 @@ export function Profile() {
           <div className="flex-1 pt-0 lg:pt-2">
             <div className="mb-10 md:mb-14 relative">
               {/* Smiley Icon */}
-              <div className="absolute -top-8 -right-0 md:-top-10 md:-right-2 w-4 h-4 md:w-5 md:h-5 text-[#FF5500]">
+              <div className="absolute -top-8 -right-0 md:-top-10 md:-right-2 w-4 h-4 md:w-5 md:h-5 text-brand">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h2c.55 0 1-.45 1-1s-.45-1-1-1H7c-.55 0-1 .45-1 1s.45 1 1 1zm8-1c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1h2c.55 0 1-.45 1-1zm-3 8c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
                 </svg>
               </div>
-              <p className="text-base md:text-xl text-[#555] leading-relaxed font-medium max-w-2xl">
+              <p className="text-base md:text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl">
                 Joris van Dijk is a Dutch designer known for his minimalist, expressive digital work. He helps startups and studios create clean interfaces and strong branding. Based in Utrecht, he blends function with emotion — and often spends his free time cycling or exploring generative art.
               </p>
             </div>
 
             {/* Experience Table */}
-            <div className="space-y-0 border-l border-black/10 pl-6 md:pl-12">
+            <div className="space-y-0 border-l border-border pl-6 md:pl-12">
               {experience.map((item, i) => (
                 <motion.div
                   key={item.role + item.company}
                   {...slideDown}
                   transition={{ ...slideDown.transition, delay: 0.4 + i * 0.1 }}
-                  className="grid grid-cols-1 md:grid-cols-3 py-4 md:py-6 border-b border-black/5 items-start md:items-center last:border-0 group hover:bg-black/[0.02] transition-colors -ml-6 md:-ml-12 pl-6 md:pl-12"
+                  className="grid grid-cols-1 md:grid-cols-3 py-4 md:py-6 border-b border-border items-start md:items-center last:border-0 group hover:bg-muted transition-colors -ml-6 md:-ml-12 pl-6 md:pl-12"
                 >
-                  <span className="font-bold text-black text-[10px] md:text-sm uppercase tracking-tight mb-1 md:mb-0">{item.role}</span>
-                  <span className="text-[#888] font-medium text-sm md:text-base mb-1 md:mb-0">{item.company}</span>
-                  <span className="text-[#888] font-medium text-xs md:text-base md:text-right">{item.years}</span>
+                  <span className="font-bold text-foreground text-[10px] md:text-sm uppercase tracking-tight mb-1 md:mb-0">{item.role}</span>
+                  <span className="text-muted-foreground font-medium text-sm md:text-base mb-1 md:mb-0">{item.company}</span>
+                  <span className="text-muted-foreground font-medium text-xs md:text-base md:text-right">{item.years}</span>
                 </motion.div>
               ))}
             </div>

@@ -109,21 +109,21 @@ export function Intro() {
       <div className="relative text-center container-width">
         {/* Hello! Header with Lines */}
         <div className="flex items-center justify-center gap-6 mb-16">
-          <div className="w-16 h-px bg-linear-to-l from-black/30 to-transparent" />
+          <div className="w-16 h-px bg-linear-to-l from-foreground/30 to-transparent" />
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#777] font-serif italic text-2xl"
+            className="text-muted-foreground font-serif italic text-2xl"
           >
             Hello!
           </motion.p>
-          <div className="w-16 h-px bg-linear-to-r from-black/30 to-transparent" />
+          <div className="w-16 h-px bg-linear-to-r from-foreground/30 to-transparent" />
         </div>
 
         <div className="relative w-full max-w-[1400px] mx-auto">
           {/* Main Heading with Unified Color and Scroll Reveal - Smaller Font (32px Desktop) */}
-          <h2 ref={textRef} className="max-w-4xl mx-auto text-[24px] md:text-[32px] font-normal leading-[1.4] tracking-tight px-4 text-black">
+          <h2 ref={textRef} className="max-w-4xl mx-auto text-[24px] md:text-[32px] font-normal leading-[1.4] tracking-tight px-4 text-foreground">
             {words.map((word, i) => {
               const start = i / words.length;
               const end = (i + 1) / words.length;
@@ -163,7 +163,7 @@ export function Intro() {
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                    className="flex items-center gap-2 pl-1.5 pr-4 py-1.5 rounded-full bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] border-[6px] border-[#f0f0f0] origin-center"
+                    className="flex items-center gap-2 pl-1.5 pr-4 py-1.5 rounded-full bg-background shadow-[0_15px_35px_rgba(0,0,0,0.1)] border-[6px] border-border origin-center"
                     style={{ rotate: `${tag.rotate}deg` }}
                   >
                     <div
@@ -171,7 +171,7 @@ export function Intro() {
                     >
                       <tag.icon size={14} strokeWidth={2.5} />
                     </div>
-                    <span className="text-black font-bold text-[13px] whitespace-nowrap">
+                    <span className="text-foreground font-bold text-[13px] whitespace-nowrap">
                       {tag.name}
                     </span>
                   </motion.div>
@@ -220,7 +220,7 @@ export function Intro() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="flex items-center gap-2 pl-1.5 pr-4 py-1.5 rounded-full bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] border-[6px] border-[#f0f0f0]"
+                  className="flex items-center gap-2 pl-1.5 pr-4 py-1.5 rounded-full bg-background shadow-[0_15px_35px_rgba(0,0,0,0.1)] border-[6px] border-border"
                   style={{
                     rotate: tag.rotate,
                     x: "-50%",
@@ -232,7 +232,7 @@ export function Intro() {
                   >
                     <tag.icon size={14} strokeWidth={2.5} />
                   </div>
-                  <span className="text-black font-bold text-[13px] whitespace-nowrap">
+                  <span className="text-foreground font-bold text-[13px] whitespace-nowrap">
                     {tag.name}
                   </span>
                 </motion.div>

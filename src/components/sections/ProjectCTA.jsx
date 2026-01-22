@@ -70,12 +70,12 @@ export function ProjectCTA() {
   return (
     <section ref={containerRef} className="relative px-4 md:px-6 pb-16 bg-transparent overflow-hidden">
       <div 
-        className="max-w-7xl mx-auto relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden min-h-[110vh] md:min-h-0 md:aspect-[16/12] shadow-2xl border-[8px] md:border-[12px] border-[#f0f0f0] bg-white"
+        className="max-w-7xl mx-auto relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden min-h-[110vh] md:min-h-0 md:aspect-[16/12] shadow-2xl border-[8px] md:border-[12px] border-border bg-background"
       >
         {/* Parallax Background: Dark Grid of Projects */}
         <motion.div 
           style={{ y: bgY }}
-          className="absolute inset-x-0 -top-[25%] h-[150%] bg-[#050505] p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pointer-events-none"
+          className="absolute inset-x-0 -top-[25%] h-[150%] bg-foreground p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pointer-events-none"
         >
           {/* Column 1 */}
           <div className="flex flex-col gap-4 md:gap-8">
@@ -114,10 +114,10 @@ export function ProjectCTA() {
             <motion.div 
               variants={tooltipVariants}
               style={{ originY: "100%", originX: "50%" }}
-              className="absolute -top-20 left-1/2 whitespace-nowrap bg-black text-white text-[16px] md:text-[18px] font-bold px-7 py-4 rounded-2xl shadow-2xl"
+              className="absolute -top-20 left-1/2 whitespace-nowrap bg-foreground text-background text-[16px] md:text-[18px] font-bold px-7 py-4 rounded-2xl shadow-2xl"
             >
               See Recent Work
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black rotate-45" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-foreground rotate-45" />
             </motion.div>
 
             {/* Folder Button */}
@@ -131,7 +131,7 @@ export function ProjectCTA() {
                 className="w-28 h-28 md:w-36 md:h-36 rounded-full flex items-center justify-center shadow-2xl border border-white/40 backdrop-blur-xl"
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-transparent rounded-full flex items-center justify-center">
-                  <Folder className="w-8 h-8 md:w-10 md:h-10 text-black fill-current" />
+                  <Folder className="w-8 h-8 md:w-10 md:h-10 text-foreground fill-current" />
                 </div>
               </motion.div>
             </div>

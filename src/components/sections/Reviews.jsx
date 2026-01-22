@@ -45,12 +45,12 @@ const BlurText = ({ text, delay = 0 }) => {
 
 export function Reviews() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 lg:py-48 bg-transparent">
+    <section className="relative overflow-hidden pt-0 pb-24 md:pb-32 lg:pb-48 bg-transparent">
       <div className="container-width relative px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 md:gap-32 lg:gap-0 relative">
           
           {/* Central Vertical Divider - Height synced to content */}
-          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-black/10 hidden lg:block" />
+          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-border hidden lg:block" />
 
           {/* Left Review - Pushed down from top */}
           <div className="relative flex flex-col items-start lg:pr-24 lg:pt-12 lg:pb-32">
@@ -61,12 +61,12 @@ export function Reviews() {
                 whileInView={{ opacity: 0.1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="absolute -right-4 md:-right-12 top-0 text-4xl md:text-5xl font-serif font-bold text-black pointer-events-none"
+                className="absolute -right-4 md:-right-12 top-0 text-4xl md:text-5xl font-serif font-bold text-foreground pointer-events-none"
               >
                 "
               </motion.div>
               
-              <blockquote className="text-lg md:text-xl lg:text-[22px] leading-[1.6] text-black font-medium mb-8 md:mb-10">
+              <blockquote className="text-lg md:text-xl lg:text-[22px] leading-[1.6] text-foreground font-medium mb-8 md:mb-10">
                 <BlurText text={reviews[0].text} delay={0.2} />
               </blockquote>
 
@@ -77,7 +77,7 @@ export function Reviews() {
                 transition={{ delay: 0.8, duration: 0.8 }}
                 className="flex items-center gap-4"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-sm">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden bg-muted shrink-0 border-2 border-background shadow-sm">
                   <img
                     src={reviews[0].avatar}
                     alt={reviews[0].author}
@@ -85,10 +85,10 @@ export function Reviews() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-black text-sm md:text-base leading-tight">
+                  <span className="font-bold text-foreground text-sm md:text-base leading-tight">
                     {reviews[0].author}
                   </span>
-                  <span className="text-[#888] text-xs md:text-sm font-medium">
+                  <span className="text-muted-foreground text-xs md:text-sm font-medium">
                     {reviews[0].role}
                   </span>
                 </div>
@@ -105,12 +105,12 @@ export function Reviews() {
                 whileInView={{ opacity: 0.1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="absolute -right-4 md:-right-12 top-0 text-4xl md:text-5xl font-serif font-bold text-black pointer-events-none"
+                className="absolute -right-4 md:-right-12 top-0 text-4xl md:text-5xl font-serif font-bold text-foreground pointer-events-none"
               >
                 "
               </motion.div>
 
-              <blockquote className="text-lg md:text-xl lg:text-[22px] leading-[1.6] text-black font-medium mb-8 md:mb-10">
+              <blockquote className="text-lg md:text-xl lg:text-[22px] leading-[1.6] text-foreground font-medium mb-8 md:mb-10">
                 <BlurText text={reviews[1].text} delay={0.4} />
               </blockquote>
 
@@ -121,7 +121,7 @@ export function Reviews() {
                 transition={{ delay: 1, duration: 0.8 }}
                 className="flex items-center gap-4"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-sm">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden bg-muted shrink-0 border-2 border-background shadow-sm">
                   <img
                     src={reviews[1].avatar}
                     alt={reviews[1].author}
@@ -129,10 +129,10 @@ export function Reviews() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-black text-sm md:text-base leading-tight">
+                  <span className="font-bold text-foreground text-sm md:text-base leading-tight">
                     {reviews[1].author}
                   </span>
-                  <span className="text-[#888] text-xs md:text-sm font-medium">
+                  <span className="text-muted-foreground text-xs md:text-sm font-medium">
                     {reviews[1].role}
                   </span>
                 </div>

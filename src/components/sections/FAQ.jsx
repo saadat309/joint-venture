@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Plus, ArrowRight } from "lucide-react";
+import { Plus, MoveRight } from "lucide-react";
 
 const faqs = [
   {
@@ -35,16 +35,16 @@ const faqs = [
 
 function AccordionItem({ question, answer, isOpen, onClick }) {
   return (
-    <div className="border-b border-black/10">
+    <div className="border-b border-border">
       <button 
         className="w-full py-6 md:py-8 lg:py-10 flex items-center justify-between text-left group transition-all"
         onClick={onClick}
       >
-        <span className="text-base md:text-xl lg:text-[22px] font-medium text-black group-hover:text-[#777] transition-colors pr-6 md:pr-8">
+        <span className="text-base md:text-xl lg:text-[22px] font-medium text-foreground group-hover:text-muted-foreground transition-colors pr-6 md:pr-8">
           {question}
         </span>
         <div className={`transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
-          <Plus size={20} className="text-[#FF5500] md:w-6 md:h-6" strokeWidth={2.5} />
+          <Plus size={20} className="text-brand md:w-6 md:h-6" strokeWidth={2.5} />
         </div>
       </button>
       <AnimatePresence initial={false}>
@@ -56,7 +56,7 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-8 md:pb-10 text-base md:text-lg text-[#666] leading-relaxed max-w-2xl font-medium">
+            <p className="pb-8 md:pb-10 text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl font-medium">
               {answer}
             </p>
           </motion.div>
@@ -70,13 +70,13 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <section id="faq" className="section-padding bg-transparent py-24 md:py-32 lg:py-48">
+    <section id="faq" className="section-padding bg-transparent py-12 md:py-16 lg:py-24">
       {/* Header */}
       <div className="container-width text-center mb-16 md:mb-24 lg:mb-32 px-4">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-6">
-          <div className="w-12 h-px bg-linear-to-l from-black/30 to-transparent" />
-          <p className="text-[#777] font-serif italic text-xl lg:text-2xl">FAQ</p>
-          <div className="w-12 h-px bg-linear-to-r from-black/30 to-transparent" />
+          <div className="w-12 h-px bg-linear-to-l from-foreground/30 to-transparent" />
+          <p className="text-muted-foreground font-serif italic text-xl lg:text-2xl">FAQ</p>
+          <div className="w-12 h-px bg-linear-to-r from-foreground/30 to-transparent" />
         </div>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight text-balance">
           Your Questions, Answered
@@ -92,10 +92,10 @@ export function FAQ() {
               whileInView={{ rotate: -2, opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full max-w-[520px] p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[3rem] bg-white border-[6px] md:border-[8px] border-[#f0f0f0] shadow-[0_20px_50px_rgba(0,0,0,0.06)] lg:sticky lg:top-32 mx-auto lg:mx-0"
+              className="w-full max-w-[520px] p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[3rem] bg-background border-[6px] md:border-[8px] border-border shadow-[0_20px_50px_rgba(0,0,0,0.06)] lg:sticky lg:top-32 mx-auto lg:mx-0"
             >
               <div className="flex items-center lg:items-start gap-4 md:gap-5 mb-8">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden shrink-0 border-2 border-background shadow-sm">
                    <img 
                     src="https://framerusercontent.com/images/kE0M3vK0f0S1V0V1V0V1V0V1.png" 
                     alt="Joris" 
@@ -106,25 +106,40 @@ export function FAQ() {
                    />
                 </div>
                 <div className="pt-0 lg:pt-1">
-                  <h3 className="text-lg md:text-xl font-bold text-black mb-0.5 md:mb-1">Have more questions?</h3>
-                  <p className="text-[#888] text-sm md:text-base font-medium leading-snug">Book a free discovery call</p>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-0.5 md:mb-1">Have more questions?</h3>
+                  <p className="text-muted-foreground text-sm md:text-base font-medium leading-snug">Book a free discovery call</p>
                 </div>
               </div>
               
               <div className="space-y-6">
                 {/* Hero Style Button */}
-                <button className="relative flex items-center p-1 md:p-2 overflow-hidden rounded-full bg-black/5 w-full">
-                  <span className="group relative flex items-center justify-center gap-2 md:gap-3 w-full px-4 py-3 md:px-8 md:py-4 text-white font-bold bg-black rounded-full shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                <button className="relative flex items-center p-1 md:p-2 overflow-hidden rounded-full bg-foreground/5 w-full">
+                  <motion.span className="group relative flex items-center justify-center gap-2 md:gap-3 w-full px-4 py-3 md:px-8 md:py-4 text-background font-bold bg-foreground rounded-full shadow-[0_15px_30px_rgba(0,0,0,0.1)]" whileHover="hover">
                     <span className="text-xs md:text-base">Book a Discovery Call</span>
-                    <ArrowRight
-                      size={16}
-                      className="transition-transform group-hover:translate-x-1 shrink-0"
-                    />
-                  </span>
+                    <div className="relative flex items-center shrink-0">
+                      <MoveRight
+                        size={16}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                      <motion.div
+                        className="absolute"
+                        initial={{ x: 0, opacity: 0 }}
+                        variants={{
+                          hover: {
+                            x: 40,
+                            opacity: [0, 1, 0],
+                            transition: { duration: 0.4, ease: "easeOut" }
+                          }
+                        }}
+                      >
+                        <MoveRight size={16} />
+                      </motion.div>
+                    </div>
+                  </motion.span>
                 </button>
                 
-                <p className="text-center text-xs md:text-sm text-[#888] font-medium">
-                  Or email me at <a href="mailto:joris@hanzo.com" className="text-black font-bold hover:text-[#FF5500] transition-colors">joris@hanzo.com</a>
+                <p className="text-center text-xs md:text-sm text-muted-foreground font-medium">
+                  Or email me at <a href="mailto:joris@hanzo.com" className="text-foreground font-bold hover:text-brand transition-colors">joris@hanzo.com</a>
                 </p>
               </div>
             </motion.div>
@@ -132,7 +147,7 @@ export function FAQ() {
 
           {/* Right Side: Accordion (60%) */}
           <div className="w-full lg:flex-1 flex flex-col order-1 lg:order-2">
-            <div className="border-t border-black/10">
+            <div className="border-t border-border">
               {faqs.map((faq, i) => (
                 <AccordionItem 
                   key={i}
