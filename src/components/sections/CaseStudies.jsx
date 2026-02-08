@@ -4,24 +4,28 @@ import { useRef, useState } from "react"
 
 const projects = [
   {
-    title: "Cinematic AI",
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80",
-    tags: ["filmmaking", "ai"],
+    title: "ContentPlus Marketing",
+    image: "/Projects/ContentPlus Marketing Agency.webp",
+    link: "https://brandwithcontentplus.com/",
+    tags: ["marketing", "agency"],
   },
   {
-    title: "Neural Brand",
-    image: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&w=1200&q=80",
-    tags: ["branding", "neural"],
+    title: "Bdaya Properties",
+    image: "/Projects/Bdaya Properties Agency.webp",
+    link: "https://salahgomaa.com/",
+    tags: ["real estate", "landing"],
   },
   {
-    title: "Vibe Interface",
-    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80",
-    tags: ["ui/ux", "dev"],
+    title: "The Blue Arch",
+    image: "/Projects/the blue arch e-commerce store.webp",
+    link: "https://www.thebluearch.com/",
+    tags: ["e-commerce", "store"],
   },
   {
-    title: "Smart System",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
-    tags: ["automation", "saas"],
+    title: "VeloqSales Dashboard",
+    image: "/Projects/Veloq dashboard.webp",
+    link: "https://veloqsales.netlify.app/",
+    tags: ["ai", "dashboard"],
   }
 ]
 
@@ -40,7 +44,10 @@ function ProjectCard({ project, index }) {
   }
 
   return (
-    <motion.div
+    <motion.a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -49,7 +56,7 @@ function ProjectCard({ project, index }) {
         ease: [0.22, 1, 0.36, 1],
         delay: index * 0.1 
       }}
-      className="group cursor-pointer"
+      className="group cursor-pointer block"
     >
       <div 
         ref={ref}
@@ -90,7 +97,7 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   )
 }
 
