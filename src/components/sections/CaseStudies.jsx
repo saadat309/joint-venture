@@ -53,7 +53,7 @@ function ProjectCard({ project, index }) {
     >
       <div 
         ref={ref}
-        className="relative aspect-[4/3] rounded-[2rem] md:rounded-[2.5rem] bg-background overflow-hidden mb-8 border border-border shadow-[0_10px_30px_rgba(0,0,0,0.04)] group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)] transition-all duration-700"
+        className="relative aspect-4/3 rounded-4xl md:rounded-[2.5rem] bg-background overflow-hidden mb-8 border border-border shadow-[0_10px_30px_rgba(0,0,0,0.04)] group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)] transition-all duration-700"
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

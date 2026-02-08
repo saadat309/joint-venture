@@ -65,7 +65,7 @@
     --foreground: 0 0% 0%;
 
     --muted: 0 0% 96%; /* #f5f5f5 */
-    --muted-foreground: 0 0% 43%; /* #555555 - Darker for readability */
+    --muted-foreground: 0 0% 33%; /* #555555 - Darker for readability */
 
     --border: 0 0% 75%; /* #bfbfbf - Darker for better visibility */
     
