@@ -3,24 +3,14 @@ import { Instagram, Linkedin } from "lucide-react";
 
 const experience = [
   {
-    role: "Freelance Practice",
-    company: "Hanzo Co.",
-    years: "2011 → Now",
+    role: "Founder",
+    company: "GlamRev AI",
+    years: "2025 → Now",
   },
   {
-    role: "Design Lead",
-    company: "Google",
-    years: "2024 → Now",
-  },
-  {
-    role: "Senior Designer",
-    company: "PayPal",
-    years: "2019 → 2024",
-  },
-  {
-    role: "Product Designer",
-    company: "Meta",
-    years: "2016 → 2019",
+    role: "Freelancer",
+    company: "Fiverr",
+    years: "2021 → Now",
   },
 ];
 
@@ -63,7 +53,7 @@ export function Profile() {
             <div className="w-12 md:w-16 h-px bg-linear-to-r from-foreground/30 to-transparent" />
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight text-balance">
-            Pushing boundaries <span className="text-muted-foreground">since 2011</span>
+            Pushing boundaries <span className="text-muted-foreground">since 2021</span>
           </h2>
         </div>
 
@@ -110,7 +100,9 @@ export function Profile() {
                 </svg>
               </div>
               <p className="text-base md:text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl">
-                Joris van Dijk is a Dutch designer known for his minimalist, expressive digital work. He helps startups and studios create clean interfaces and strong branding. Based in Utrecht, he blends function with emotion — and often spends his free time cycling or exploring generative art.
+                Anas Khan is the visionary founder of GlamRev AI and a pioneer in the generative media space. He combines a deep technical understanding of AI architecture with the eye of a filmmaker, specializing in AI-driven cinematography and photorealistic visual design. 
+                <br /><br />
+                Known for his forward-thinking approach to "vibe coding"—the art of harmonizing natural language with functional code—Anas leads with a philosophy that technology should empower human creativity to bring unique visions to life with unprecedented speed.
               </p>
             </div>
 

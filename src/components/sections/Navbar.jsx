@@ -57,9 +57,9 @@ export function Navbar() {
           {/* Logo with full round white bg */}
           <a 
             href="/" 
-            className="flex items-center justify-center px-4 py-1.5 rounded-full bg-background border border-border shadow-sm text-lg font-bold tracking-tight text-foreground"
+            className="flex items-center justify-center px-4 py-1.5 rounded-full bg-background border border-border shadow-sm"
           >
-            Hanzo
+            <img src="/GlamRev-black-logo.webp" alt="GlamRev Logo" className="h-7 w-auto" />
           </a>
 
           <div className="flex items-center gap-4">
@@ -102,7 +102,7 @@ export function Navbar() {
                 animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, scale: 0.95, y: -20, filter: "blur(10px)" }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="w-[320px] bg-background rounded-[2.5rem] p-10 shadow-[0_40px_100px_rgba(0,0,0,0.15)] flex flex-col items-start gap-8"
+                className="w-[calc(100vw-3rem)] min-[375px]:w-[320px] bg-background rounded-[2.5rem] p-10 shadow-[0_40px_100px_rgba(0,0,0,0.15)] flex flex-col items-start gap-8"
               >
                 <div className="flex flex-col gap-5 w-full">
                   {menuLinks.map((link) => (
