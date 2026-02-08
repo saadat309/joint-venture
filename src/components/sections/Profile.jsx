@@ -71,11 +71,11 @@ export function Profile() {
           {/* Left: Image Column (Compact 35% width) */}
           <div className="w-full lg:w-[35%] shrink-0">
             <div
-              className="relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] md:border-[6px] border-background shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-muted lg:-rotate-1"
+              className="relative aspect-[3/4] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] md:border-[6px] border-background shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-muted lg:-rotate-1"
             >
               <img
-                src="https://framerusercontent.com/images/kE0M3vK0f0S1V0V1V0V1V0V1.png" 
-                alt="Joris van Dijk"
+                src="/profile.webp" 
+                alt="Anas Khan"
                 className="w-full h-full object-cover grayscale"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
@@ -94,8 +94,8 @@ export function Profile() {
                 <a href="#" className="hover:text-foreground transition-colors"><XIcon /></a>
               </div>
               <div className="text-right">
-                <h3 className="font-bold text-base md:text-lg text-foreground leading-tight">Joris van Dijk</h3>
-                <p className="text-muted-foreground text-xs md:text-sm font-medium">Hanzo Studio, Founder</p>
+                <h3 className="font-bold text-base md:text-lg text-foreground leading-tight">Anas Khan</h3>
+                <p className="text-muted-foreground text-xs md:text-sm font-medium">Glamrev AI, Founder</p>
               </div>
             </motion.div>
           </div>
