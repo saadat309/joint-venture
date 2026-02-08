@@ -198,9 +198,14 @@ export function Pricing() {
                     Booking Open — 2 Spots Left
                  </div>
 
-                 <button className="relative flex items-center p-1.5 md:p-2 overflow-hidden rounded-full bg-background/80 w-full md:w-fit">
+                 <a 
+                    href="https://wa.me/923219900724" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="relative flex items-center p-1.5 md:p-2 overflow-hidden rounded-full bg-background/80 w-full md:w-fit"
+                  >
                     <motion.span className="group relative flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-4 text-background font-bold bg-foreground rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.1)] w-full md:w-auto" whileHover="hover">
-                      <span className="text-xs md:text-base">Book Free Discovery Call</span>
+                      <span className="text-xs md:text-base">Get Started on WhatsApp</span>
                       <div className="relative flex items-center">
                         <MoveRight
                           size={16}
@@ -221,7 +226,7 @@ export function Pricing() {
                         </motion.div>
                       </div>
                     </motion.span>
-                  </button>
+                  </a>
               </div>
             </div>
 

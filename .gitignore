@@ -29,8 +29,5 @@ dist-ssr
 .env.production
 .env.local
 
-# misc
-# GEMINI.md
-
+misc
 GEMINI.md
-misc/info.md

@@ -4,24 +4,24 @@ import { useRef, useState } from "react"
 
 const projects = [
   {
-    title: "Strida",
-    image: "https://framerusercontent.com/images/kE0M3vK0f0S1V0V1V0V1V0V1.png",
-    tags: ["portfolio", "sidebar"],
+    title: "Cinematic AI",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80",
+    tags: ["filmmaking", "ai"],
   },
   {
-    title: "Bravo",
+    title: "Neural Brand",
+    image: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&w=1200&q=80",
+    tags: ["branding", "neural"],
+  },
+  {
+    title: "Vibe Interface",
     image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80",
-    tags: ["ui/ux", "app"],
+    tags: ["ui/ux", "dev"],
   },
   {
-    title: "Nitro",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-    tags: ["design", "system"],
-  },
-  {
-    title: "Fargo",
-    image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=1200&q=80",
-    tags: ["saas", "web"],
+    title: "Smart System",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    tags: ["automation", "saas"],
   }
 ]
 

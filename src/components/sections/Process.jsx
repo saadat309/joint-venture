@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 const steps = [
   {
     number: "1",
-    title: "Subscribe",
-    description: "Choose a plan and request as many designs as you need.",
+    title: "Creative Strategy",
+    description: "Mapping your AI film vision, product aesthetics, and full-stack web architecture.",
     rotation: -4,
   },
   {
     number: "2",
-    title: "Request",
-    description: "Choose a plan and request as many designs as you need.",
+    title: "Smart Production",
+    description: "Building cinematic media, automated AI products, and scalable digital systems.",
     rotation: 6,
   },
   {
     number: "3",
-    title: "Get Your Designs",
-    description: "Choose a plan and request as many designs as you need.",
+    title: "Rapid Launch",
+    description: "Deploying high-impact visuals and AI-powered apps to scale your startup.",
     rotation: -3,
   },
 ];

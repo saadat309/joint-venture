@@ -4,32 +4,32 @@ import { Plus, MoveRight } from "lucide-react";
 
 const faqs = [
   {
-    question: "What's the difference between a subscription and a custom project?",
-    answer: "Our subscription model provides ongoing design support with unlimited requests, whereas custom projects are one-off engagements with a specific scope and timeline."
+    question: "What specific services does GlamRev AI provide?",
+    answer: "We specialize in cinematic AI filmmaking, hyper-realistic AI product photography, full-stack AI application development, and AI-driven automation workflows."
   },
   {
-    question: "How fast is the turnaround?",
-    answer: "Most design requests are completed within 2-3 business days. More complex requests may take longer."
+    question: "How do you ensure consistency in AI filmmaking?",
+    answer: "Our experts use advanced neural network workflows to maintain frame-to-frame consistency, mastering camera angles and lighting to create professional-grade cinematic narratives."
   },
   {
-    question: "How many requests can I make?",
-    answer: "You can add as many requests to your queue as you like, and they will be delivered one by one."
+    question: "What exactly is 'vibe coding'?",
+    answer: "Vibe coding is our approach to harmonizing natural language with functional code. It allows us to build intuitive, aesthetic-first digital products that match your brand's exact vision with incredible speed."
   },
   {
-    question: "What types of design do you handle?",
-    answer: "We handle everything from UI/UX and web design to brand identity, social media graphics, and pitch decks."
+    question: "How fast is the turnaround for AI projects?",
+    answer: "Most AI-driven designs and product synthesis are completed within 2-3 business days. Complex cinematic productions are significantly faster than traditional filmmaking methods."
   },
   {
-    question: "What tools do you use?",
-    answer: "We primarily use Figma for design, and various other tools for animation, prototyping, and asset creation."
+    question: "Do you offer full-stack web development?",
+    answer: "Yes. Our team builds robust, scalable web and mobile applications integrated with the latest LLMs and automation agents, ensuring your brand stays at the forefront of tech."
   },
   {
-    question: "Can I pause the subscription?",
-    answer: "Yes, you can pause or cancel your subscription at any time. If you pause, the remaining days in your billing cycle will be held for future use."
+    question: "Is the AI-generated content high-fidelity?",
+    answer: "Absolutely. We specialize in photorealistic visual design and high-fidelity Photoshop AI integration, ensuring every asset meets premium production standards."
   },
   {
-    question: "Do you offer development too?",
-    answer: "While we primarily focus on design, we can provide high-fidelity prototypes and work closely with your engineering team to ensure perfect implementation."
+    question: "How do we get started on a project?",
+    answer: "The easiest way is to message us on WhatsApp. We'll discuss your vision, map out the creative strategy, and move directly into production."
   }
 ];
 
@@ -97,25 +97,30 @@ export function FAQ() {
               <div className="flex items-center lg:items-start gap-4 md:gap-5 mb-8">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden shrink-0 border-2 border-background shadow-sm">
                    <img 
-                    src="https://framerusercontent.com/images/kE0M3vK0f0S1V0V1V0V1V0V1.png" 
-                    alt="Joris" 
-                    className="w-full h-full object-cover"
+                    src="/profile.webp" 
+                    alt="Anas Khan" 
+                    className="w-full h-full object-cover grayscale"
                     onError={(e) => {
-                      e.target.src = "https://i.pravatar.cc/150?u=joris";
+                      e.target.src = "https://i.pravatar.cc/150?u=anas";
                     }}
                    />
                 </div>
                 <div className="pt-0 lg:pt-1">
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-0.5 md:mb-1">Have more questions?</h3>
-                  <p className="text-muted-foreground text-sm md:text-base font-medium leading-snug">Book a free discovery call</p>
+                  <p className="text-muted-foreground text-sm md:text-base font-medium leading-snug">Connect on WhatsApp</p>
                 </div>
               </div>
               
               <div className="space-y-6">
                 {/* Hero Style Button */}
-                <button className="relative flex items-center p-1 md:p-2 overflow-hidden rounded-full bg-foreground/5 w-full">
+                <a 
+                  href="https://wa.me/923219900724" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="relative flex items-center p-1 md:p-2 overflow-hidden rounded-full bg-foreground/5 w-full"
+                >
                   <motion.span className="group relative flex items-center justify-center gap-2 md:gap-3 w-full px-4 py-3 md:px-8 md:py-4 text-background font-bold bg-foreground rounded-full shadow-[0_15px_30px_rgba(0,0,0,0.1)]" whileHover="hover">
-                    <span className="text-xs md:text-base">Book a Discovery Call</span>
+                    <span className="text-xs md:text-base">Ask on WhatsApp</span>
                     <div className="relative flex items-center shrink-0">
                       <MoveRight
                         size={16}
@@ -136,10 +141,10 @@ export function FAQ() {
                       </motion.div>
                     </div>
                   </motion.span>
-                </button>
+                </a>
                 
                 <p className="text-center text-xs md:text-sm text-muted-foreground font-medium">
-                  Or email me at <a href="mailto:joris@hanzo.com" className="text-foreground font-bold hover:text-brand transition-colors">joris@hanzo.com</a>
+                  Or email me at <a href="mailto:glamrevofficial@gmail.com" className="text-foreground font-bold hover:text-brand transition-colors">glamrevofficial@gmail.com</a>
                 </p>
               </div>
             </motion.div>

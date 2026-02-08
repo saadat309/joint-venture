@@ -1,11 +1,11 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
-import { LayoutGrid, Search, Monitor, Target, Zap, FileText } from "lucide-react"
+import { Clapperboard, Camera, Cpu, Code, Wand2, Globe } from "lucide-react"
 
 const tags = [
   {
-    name: "Design systems",
-    icon: LayoutGrid,
+    name: "AI film making",
+    icon: Clapperboard,
     color: "bg-orange-500",
     left: "13%",
     top: "-25%",
@@ -13,8 +13,8 @@ const tags = [
     rotate: 7
   },
   {
-    name: "Animation",
-    icon: Zap,
+    name: "AI Products",
+    icon: Camera,
     color: "bg-green-500",
     left: "88%",
     top: "-25%",
@@ -22,17 +22,17 @@ const tags = [
     rotate: -8
   },
   { 
-    name: "UI/UX", 
-    icon: Monitor, 
+    name: "AI Automation", 
+    icon: Cpu, 
     color: "bg-zinc-800", 
-    left: "10%",
+    left: "8%",
     top: "30%",
     initialX: -150,
     rotate: -1 
   },
   { 
-    name: "Prototyping", 
-    icon: FileText, 
+    name: "AI Vibe Coding", 
+    icon: Wand2, 
     color: "bg-pink-500", 
     left: "92%",
     top: "30%",
@@ -40,8 +40,8 @@ const tags = [
     rotate: 1 
   },
   {
-    name: "Research",
-    icon: Search,
+    name: "Web Development",
+    icon: Code,
     color: "bg-sky-500",
     left: "13%",
     top: "85%",
@@ -49,8 +49,8 @@ const tags = [
     rotate: -10
   },
   {
-    name: "Strategy",
-    icon: Target,
+    name: "Generative Media",
+    icon: Globe,
     color: "bg-yellow-500",
     left: "88%",
     top: "85%",
@@ -101,7 +101,7 @@ export function Intro() {
     restDelta: 0.001
   })
 
-  const fullText = "We help startups and enterprise to establish an emotional connection between their products and happy engaged customers"
+  const fullText = "We exist at the intersection of imagination and intelligence, redefining digital storytelling through cinematic AI and high-performance digital products."
   const words = fullText.split(" ")
 
   return (

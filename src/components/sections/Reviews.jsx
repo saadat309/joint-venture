@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const reviews = [
   {
-    text: "Working with Joris was a game-changer. He instantly understood our vision and translated it into a sleek, intuitive product. The process felt effortless, and the results exceeded our expectations.",
-    author: "Sophie Lemaire",
-    role: "Product Lead at Loomi",
-    avatar: "https://i.pravatar.cc/150?u=sophie",
+    text: "GlamRev AI completely revolutionized our brand's visual storytelling. The cinematic AI films they produced were not only hyper-realistic but captured our brand's soul with incredible precision.",
+    author: "Sarah Jenkins",
+    role: "CEO at Nexus Media",
+    avatar: "https://i.pravatar.cc/150?u=sarah",
   },
   {
-    text: "Joris brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been incredible.",
-    author: "Milan Bakker",
-    role: "Founder of Drifted Studio",
-    avatar: "https://i.pravatar.cc/150?u=milan",
+    text: "The speed and quality of their AI-driven design and automation workflows are unmatched. They helped us scale our startup's digital presence in weeks, not months. A total game-changer for us.",
+    author: "Marcus Chen",
+    role: "Founder of Skywise Tech",
+    avatar: "https://i.pravatar.cc/150?u=marcus",
   },
 ];
 

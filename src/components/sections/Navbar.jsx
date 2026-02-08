@@ -119,13 +119,20 @@ export function Navbar() {
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-border w-full">
-                  {[XIcon, Linkedin, Instagram].map((Icon, i) => (
-                    <div 
+                  {[
+                    { Icon: XIcon, href: "https://wa.me/923219900724" },
+                    { Icon: Linkedin, href: "https://wa.me/923219900724" },
+                    { Icon: Instagram, href: "https://wa.me/923219900724" }
+                  ].map((item, i) => (
+                    <a 
                       key={i}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center w-10 h-10 border border-border rounded-full cursor-pointer text-foreground hover:bg-foreground hover:text-background transition-all"
                     >
-                      {typeof Icon === 'function' ? <Icon /> : <Icon size={16} strokeWidth={1.5} />}
-                    </div>
+                      {typeof item.Icon === 'function' ? <item.Icon /> : <item.Icon size={16} strokeWidth={1.5} />}
+                    </a>
                   ))}
                 </div>
               </motion.div>
